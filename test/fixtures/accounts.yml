@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  account_type: MyString
+  credit_limit: 
+  credit_limit: 
+
+two:
+  account_type: MyString
+  credit_limit: 
+  credit_limit: 

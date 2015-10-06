@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  with_interest: 1
+  total_amount: 
+  total_amount: 
+  date_start: 2015-10-06 16:30:30
+  same_day_charge: 1
+  last_payment: 2015-10-06 16:30:30
+  total_months: 1
+  paid_months: 1
+  account_id: 1
+  notes: MyString
+
+two:
+  description: MyString
+  with_interest: 1
+  total_amount: 
+  total_amount: 
+  date_start: 2015-10-06 16:30:30
+  same_day_charge: 1
+  last_payment: 2015-10-06 16:30:30
+  total_months: 1
+  paid_months: 1
+  account_id: 1
+  notes: MyString
