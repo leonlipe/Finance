@@ -1,0 +1,53 @@
+<%= form_for(@parciality) do |f| %>
+  <% if @parciality.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@parciality.errors.count, "error") %> prohibited this parciality from being saved:</h2>
+
+      <ul>
+      <% @parciality.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :with_interest %><br>
+    <%= f.text_field :with_interest %>
+  </div>
+  <div class="field">
+    <%= f.label :total_aamount %><br>
+    <%= f.text_field :total_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :date_start %><br>
+    <%= f.text_field :date_start %>
+  </div>
+  <div class="field">
+    <%= f.label :same_day_charge %><br>
+    <%= f.text_field :same_day_charge %>
+  </div>
+  <div class="field">
+    <%= f.label :last_payment %><br>
+    <%= f.text_field :last_payment %>
+  </div>
+  <div class="field">
+    <%= f.label :total_months %><br>
+    <%= f.text_field :total_months %>
+  </div>
+  <div class="field">
+    <%= f.label :account_id %><br>
+    <%= f.text_field :account_id %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

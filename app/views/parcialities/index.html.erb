@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Parcialities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description,</th>
+      <th>With interest,</th>
+      <th>Total amount,</th>
+      <th>Date start,</th>
+      <th>Same day charge,</th>
+      <th>Last payment,</th>
+      <th>Total months,</th>
+      <th>Account id,</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @parcialities.each do |parciality| %>
+      <tr>
+        <td><%= parciality.description %></td>
+        <td><%= parciality.with_interest %></td>
+        <td><%= parciality.total_amount %></td>
+        <td><%= parciality.date_start %></td>
+        <td><%= parciality.same_day_charge %></td>
+        <td><%= parciality.last_payment %></td>
+        <td><%= parciality.total_months %></td>
+        <td><%= parciality.account_id %></td>
+        <td><%= parciality.notes %></td>
+        <td><%= link_to 'Show', parciality %></td>
+        <td><%= link_to 'Edit', edit_parciality_path(parciality) %></td>
+        <td><%= link_to 'Destroy', parciality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Parciality', new_parciality_path %>

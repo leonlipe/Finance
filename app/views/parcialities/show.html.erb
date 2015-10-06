@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description,:</strong>
+  <%= @parciality.description %>
+</p>
+
+<p>
+  <strong>With interest,:</strong>
+  <%= @parciality.with_interest %>
+</p>
+
+<p>
+  <strong>Total amount,:</strong>
+  <%= @parciality.total_amount %>
+</p>
+
+<p>
+  <strong>Date start,:</strong>
+  <%= @parciality.date_start %>
+</p>
+
+<p>
+  <strong>Same day charge,:</strong>
+  <%= @parciality.same_day_charge %>
+</p>
+
+<p>
+  <strong>Last payment,:</strong>
+  <%= @parciality.last_payment %>
+</p>
+
+<p>
+  <strong>Total months,:</strong>
+  <%= @parciality.total_months %>
+</p>
+
+<p>
+  <strong>Account id,:</strong>
+  <%= @parciality.account_id %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @parciality.notes %>
+</p>
+
+<%= link_to 'Edit', edit_parciality_path(@parciality) %> |
+<%= link_to 'Back', parcialities_path %>

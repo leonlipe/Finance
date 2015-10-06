@@ -14,49 +14,49 @@
 ActiveRecord::Schema.define(version: 20151006213030) do
 
   create_table "accounts", force: :cascade do |t|
-    t.string   "account_type"
-    t.decimal  "credit_limit", precision: 5, scale: 2
-    t.integer  "bank_id"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.string   "account_type", limit: 255
+    t.decimal  "credit_limit",             precision: 5, scale: 2
+    t.integer  "bank_id",      limit: 4
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
   end
 
   create_table "banks", force: :cascade do |t|
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "description", limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "description", limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "movements", force: :cascade do |t|
-    t.decimal  "amount",      precision: 5, scale: 2
+    t.decimal  "amount",                  precision: 5, scale: 2
     t.datetime "mov_date"
-    t.string   "mov_type"
-    t.string   "description"
-    t.integer  "account_id"
-    t.integer  "category_id"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.string   "mov_type",    limit: 255
+    t.string   "description", limit: 255
+    t.integer  "account_id",  limit: 4
+    t.integer  "category_id", limit: 4
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
   end
 
   create_table "parcialities", force: :cascade do |t|
-    t.string   "description"
-    t.integer  "with_interest"
-    t.decimal  "total_amount",    precision: 5, scale: 2
+    t.string   "description",     limit: 255
+    t.integer  "with_interest",   limit: 4
+    t.decimal  "total_amount",                precision: 5, scale: 2
     t.datetime "date_start"
-    t.integer  "same_day_charge"
+    t.integer  "same_day_charge", limit: 4
     t.datetime "last_payment"
-    t.integer  "total_months"
-    t.integer  "paid_months"
-    t.integer  "account_id"
-    t.string   "notes"
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
+    t.integer  "total_months",    limit: 4
+    t.integer  "paid_months",     limit: 4
+    t.integer  "account_id",      limit: 4
+    t.string   "notes",           limit: 255
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
   end
 
 end

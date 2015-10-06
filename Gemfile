@@ -45,3 +45,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'foundation-rails'
+gem 'mysql2', '~> 0.3.20'
+

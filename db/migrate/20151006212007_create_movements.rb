@@ -1,7 +1,7 @@
 class CreateMovements < ActiveRecord::Migration
   def change
     create_table :movements do |t|
-      t.decimal :amount, precision: 5, scale: 2
+      t.decimal :amount, precision: 9, scale: 2
       t.timestamp :mov_date
       t.string :mov_type
       t.string :description

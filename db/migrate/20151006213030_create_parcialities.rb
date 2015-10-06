@@ -3,7 +3,7 @@ class CreateParcialities < ActiveRecord::Migration
     create_table :parcialities do |t|
       t.string :description
       t.integer :with_interest
-      t.decimal :total_amount, precision: 5, scale: 2
+      t.decimal :total_amount, precision: 9, scale: 2
       t.timestamp :date_start
       t.integer :same_day_charge
       t.timestamp :last_payment
